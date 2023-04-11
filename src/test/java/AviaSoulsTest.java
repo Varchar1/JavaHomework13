@@ -35,23 +35,25 @@ public class AviaSoulsTest {
             9_00,
             13_10
     );
+
     @Test
     public void compareToTest() {
-         AviaSouls manager = new AviaSouls();
+        AviaSouls manager = new AviaSouls();
 
-         manager.add(ticket1);
-         manager.add(ticket2);
-         manager.add(ticket3);
-         manager.add(ticket4);
-         manager.add(ticket5);
+        manager.add(ticket1);
+        manager.add(ticket2);
+        manager.add(ticket3);
+        manager.add(ticket4);
+        manager.add(ticket5);
 
-         Ticket[] tickets = {ticket1, ticket2, ticket3, ticket4, ticket5};
-         Arrays.sort(tickets);
+        Ticket[] tickets = {ticket1, ticket2, ticket3, ticket4, ticket5};
+        Arrays.sort(tickets);
 
-         Ticket[] expected = {ticket2, ticket1, ticket4, ticket5, ticket3};
-         Ticket[] actual = tickets;
+        Ticket[] expected = {ticket2, ticket1, ticket4, ticket5, ticket3};
+        Ticket[] actual = tickets;
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void searchTest() {
         AviaSouls manager = new AviaSouls();
@@ -67,6 +69,7 @@ public class AviaSoulsTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void noSearchTest() {
         AviaSouls manager = new AviaSouls();
@@ -102,6 +105,7 @@ public class AviaSoulsTest {
         Ticket[] actual = tickets;
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void searchAndSortByTest() {
         AviaSouls manager = new AviaSouls();
@@ -119,6 +123,7 @@ public class AviaSoulsTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void noSearchAndSortByTest() {
         AviaSouls manager = new AviaSouls();
